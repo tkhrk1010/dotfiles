@@ -1,0 +1,17 @@
+set wrap-lines = yes
+# main view の左端にコミットIDを表示する
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+# . で HEAD との diff
+bind main    .      !sh -c "git diff %(commit) | tig"
+bind diff    .      !sh -c "git diff %(commit) | tig"
+bind refs    .      !sh -c "git diff %(branch) | tig"
+# blame view の行数表示をON、intervalを1に
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+# Pager系の行数表示をON、intervalを1に (default: line-number:no,interval=5)
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+# リフレッシュするタイミング
+set refresh-mode = auto
