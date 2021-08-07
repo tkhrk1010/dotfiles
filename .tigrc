@@ -1,5 +1,5 @@
-# 現在行をハイライト
-set wrap-lines = yes
+# リフレッシュするタイミング
+set refresh-mode = auto
 
 # main view の左端にコミットIDを表示
 set main-view = id date author:email-user commit-title:graph=yes,refs=yes
@@ -12,11 +12,13 @@ set blob-view   = line-number:yes,interval=1 text
 set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
 set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
 
-# リフレッシュするタイミング
-set refresh-mode = auto
-
 # . で HEAD との diff
-bind main    .      !sh -c "git diff %(commit) | tig"
-bind diff    .      !sh -c "git diff %(commit) | tig"
-bind refs    .      !sh -c "git diff %(branch) | tig"
-bind generic P      ?git push -u %(remote) %(repo:head)
+bind main . !sh -c "git diff %(commit) | tig"
+bind diff . !sh -c "git diff %(commit) | tig"
+bind refs . !sh -c "git diff %(branch) | tig"
+
+# diff viewをside-by-sideに切り替え
+bind diff D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
+
+# git push
+bind generic P ?git push -u %(remote) %(repo:head)
