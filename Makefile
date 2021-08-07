@@ -13,7 +13,17 @@ help: ## self-documenting Makefile
 		| sort \
 		| awk 'BEGIN {FS = ":.*?## "}; {printf "${CYAN}%-30s${RESET}%s\n", $$1, $$2}'
 
+#
+# setup
+#
 karabinersetup: ## set up karabiner config
 	@printf '${CYAN}%s${RESET}\n' 'set up karabiner config'
-	@mv ~/.config/karabiner/karabiner.json ~/dotfiles/
 	@ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
+
+tigsetup: ## set up tig config
+	@printf '${CYAN}%s${RESET}\n' 'set up tig config'
+	@ln -sf ~/dotfiles/.tigrc ~/.tigrc
+
+#
+# backup
+#
