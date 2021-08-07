@@ -16,6 +16,10 @@ help: ## self-documenting Makefile
 #
 # setup
 #
+tmuxsetup: ## set up tmux config
+	@printf '${CYAN}%s${RESET}\n' 'set up tmux config'
+	@ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+
 karabinersetup: ## set up karabiner config
 	@printf '${CYAN}%s${RESET}\n' 'set up karabiner config'
 	@ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
