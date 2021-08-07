@@ -57,7 +57,9 @@ syntax enable
 " 行を表示
 set number
 " clipboardに自動コピー
-set clipboard=unnamed,autoselect
+" +=じゃなかったが、以下のサイトを見て+=に変更した
+" https://qiita.com/iwaseasahi/items/a45b99a484966662adbe
+set clipboard+=unnamed,autoselect
 " backspaceを有効にする
 set backspace=indent,eol,start
 
@@ -68,6 +70,11 @@ set fileencodings=utf-8,sjis
 "ステータスラインを表示するウィンドウを設定する
 "2:常にステータスラインを表示する
 set laststatus=2
+
+" Ctrl-nでNERDTreeを開く
+map <C-n> :NERDTreeToggle<CR>
+" 隠しファイルを表示する
+let NERDTreeShowHidden = 1
 
 " ruby -----------------------------
 " 挿入モードでTABを挿入するとき、代わりに適切な数の空白を使う

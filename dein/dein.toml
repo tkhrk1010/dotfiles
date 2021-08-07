@@ -1,0 +1,23 @@
+[[plugins]]
+repo = 'junegunn/fzf'
+build_on = '''
+./install -all
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]] # tree表示
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] # 置換のプレビュー
+repo = 'markonm/traces.vim'
+
+#[[plugins]] # status line
+#repo = 'itchyny/lightline.vim'
+
+#[[plugins]] # Formatter
+#repo = 'ruby-formatter/rufo-vim'
+
+#[[plugins]] # Align Formatter
+#repo = 'junegunn/vim-easy-align'

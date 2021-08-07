@@ -16,6 +16,10 @@ help: ## self-documenting Makefile
 #
 # setup
 #
+vimsetup: ## set up vim config
+	@printf '${CYAN}%s${RESET}\n' 'set up vim config'
+	@ln -sf ~/dotfiles/.vimrc ~/.vimrc
+
 tmuxsetup: ## set up tmux config
 	@printf '${CYAN}%s${RESET}\n' 'set up tmux config'
 	@ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
