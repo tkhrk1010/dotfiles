@@ -1,15 +1,15 @@
 # dotfiles
-control dotfiles  
 
 ## set up
 refer Makefile command: xxxsetup 
 
 ## config list
+- zsh
 - vim
 - tmux
+- git
 - tig
 - karabiner
-
 
 ## Brewfile
 ### backup
@@ -17,5 +17,3 @@ refer Makefile command: xxxsetup
 ### install
     $ brew bundle --global
 
-## iterm
-https://scrapbox.io/***/iterm2%E8%A8%AD%E5%AE%9A  

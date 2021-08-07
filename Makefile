@@ -28,14 +28,14 @@ tmuxsetup: ## set up tmux config
 	@printf '${CYAN}%s${RESET}\n' 'set up tmux config'
 	@ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-karabinersetup: ## set up karabiner config
-	@printf '${CYAN}%s${RESET}\n' 'set up karabiner config'
-	@ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
+gitsetup: ## set up tmux config
+	@printf '${CYAN}%s${RESET}\n' 'set up git config'
+	@ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 tigsetup: ## set up tig config
 	@printf '${CYAN}%s${RESET}\n' 'set up tig config'
 	@ln -sf ~/dotfiles/.tigrc ~/.tigrc
 
-#
-# backup
-#
+karabinersetup: ## set up karabiner config
+	@printf '${CYAN}%s${RESET}\n' 'set up karabiner config'
+	@ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json

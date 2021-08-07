@@ -1,0 +1,12 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	autoCRLF = false
+[include]
+	# 機密情報は ~/.gitconfig.local に記載
+	path = ~/.gitconfig.local
+[credential]
+	helper = osxkeychain
+	UseHttpPath = true
+[alias]
+	pu = pull
+	ps = !git push origin `git rev-parse --abbrev-ref HEAD`

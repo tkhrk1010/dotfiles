@@ -1,0 +1,19 @@
+backup
+
+# vim
+.netrwhist
+
+# dein
+dein/merged/
+dein/repos/
+dein/rollbacks/
+dein/temp/
+dein/.dein/
+dein/.cache/
+dein/cache_vi
+dein/cache_vim
+dein/state_vi.vim
+dein/state_vim.vim
+
+# secrets
+secrets
