@@ -8,12 +8,27 @@ export LOCAL_HOST_IP=`ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet 
 setopt correct
 SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "+
 
+# 依存関係も含めてdocker imageをすべて消す
+# https://zenn.dev/msickpaler/articles/607e562a52cf07
+rmiAllFromChild() {
+  ids=$(docker images -q)
+  for id in ${ids}; do
+    childId=$(
+      for i in ${ids}; do
+        docker history $i | grep -q $id && echo $i
+      done | sort -u
+    )
+    docker rmi ${childId}
+  done
+}
+
 # *-------------------------------
 # alias
 # *-------------------------------
 alias gitcd='git checkout develop'
 alias gitpod='git pull origin develop'
 alias bi='bundle install'
+alias clipy='set -A array $(ps aux -m | grep Clipy | grep -v grep | grep $USER); kill $array[2]; osascript -e '\''run app "Clipy"'\'''
 
 # *-------------------------------
 # prompt

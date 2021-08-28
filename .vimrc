@@ -80,8 +80,8 @@ command! -bang -nargs=* Rg
 set expandtab
 
 " 新しい行を開始したとき、新しい行のインデントを現在行と同じにする
-set autoindent
-set smartindent
+"set autoindent
+"set smartindent
 
 " Enable rufo (RUby FOrmat)
 let g:rufo_auto_formatting = 1
