@@ -10,3 +10,5 @@
 [alias]
 	pu = pull
 	ps = !git push origin `git rev-parse --abbrev-ref HEAD`
+[init]
+	defaultBranch = main
