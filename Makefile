@@ -19,6 +19,7 @@ help: ## self-documenting Makefile
 zshsetup: ## set up vim config
 	@printf '${CYAN}%s${RESET}\n' 'set up zsh config'
 	@ln -sf ~/dotfiles/.zshrc ~/.zshrc
+	@ln -sf ~/dotfiles/.zsh_functions ~/.zsh_functions
 
 vimsetup: ## set up vim config
 	@printf '${CYAN}%s${RESET}\n' 'set up vim config'

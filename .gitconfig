@@ -2,13 +2,15 @@
 	excludesfile = ~/.gitignore_global
 	autoCRLF = false
 [include]
-	# 機密情報は ~/.gitconfig.local に記載
+	# personal config is managed
 	path = ~/.gitconfig.local
 [credential]
 	helper = osxkeychain
 	UseHttpPath = true
 [alias]
-	pu = pull
-	ps = !git push origin `git rev-parse --abbrev-ref HEAD`
+	cd = checkout develop
+	pod = pull origin develop
+	# push current branch to origin
+	pu = !git push origin `git rev-parse --abbrev-ref HEAD` -u
 [init]
 	defaultBranch = main

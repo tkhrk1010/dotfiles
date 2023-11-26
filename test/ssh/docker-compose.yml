@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  sshd_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2222:22"
+    container_name: sshd_container
+
