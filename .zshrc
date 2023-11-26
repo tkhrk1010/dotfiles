@@ -13,4 +13,3 @@ alias python="python3"
 
 # function
 source ~/.zsh_functions/ssh_colors.zsh
-source ~/.zsh_functions/change-codecommit-credential.zsh
