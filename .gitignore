@@ -17,3 +17,5 @@ dein/state_vim.vim
 
 # secrets
 secrets
+
+.DS_Store
