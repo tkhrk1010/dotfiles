@@ -32,7 +32,7 @@ let NERDTreeShowHidden = 1
 " dein
 "---------------------------
 "dein.vim dark power
-let s:dein_dir = expand('~/dotfiles/dein')
+let s:dein_dir = expand('~/code/dotfiles/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 set nocompatible
