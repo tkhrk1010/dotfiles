@@ -2,8 +2,8 @@
 	excludesfile = ~/.gitignore_global
 	autoCRLF = false
 [user]
-	name =
-	email =
+	name = "tkhrk1010"
+	email = "tkhrk1010@users.noreply.github.com"
 [include]
 	# personal config is managed
 	path = ~/.gitconfig.local

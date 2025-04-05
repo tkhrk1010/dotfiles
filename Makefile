@@ -18,25 +18,25 @@ help: ## self-documenting Makefile
 #
 zshsetup: ## set up vim config
 	@printf '${CYAN}%s${RESET}\n' 'set up zsh config'
-	@ln -sf ~/dotfiles/.zshrc ~/.zshrc
-	@ln -sf ~/dotfiles/.zsh_functions ~/.zsh_functions
+	@ln -sf ~/code/dotfiles/.zshrc ~/.zshrc
+	@ln -sf ~/code/dotfiles/.zsh_functions ~/.zsh_functions
 
 vimsetup: ## set up vim config
 	@printf '${CYAN}%s${RESET}\n' 'set up vim config'
-	@ln -sf ~/dotfiles/.vimrc ~/.vimrc
+	@ln -sf ~/code/dotfiles/.vimrc ~/.vimrc
 
 tmuxsetup: ## set up tmux config
 	@printf '${CYAN}%s${RESET}\n' 'set up tmux config'
-	@ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+	@ln -sf ~/code/dotfiles/.tmux.conf ~/.tmux.conf
 
 gitsetup: ## set up tmux config
 	@printf '${CYAN}%s${RESET}\n' 'set up git config'
-	@ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+	@ln -sf ~/code/dotfiles/.gitconfig ~/.gitconfig
 
 tigsetup: ## set up tig config
 	@printf '${CYAN}%s${RESET}\n' 'set up tig config'
-	@ln -sf ~/dotfiles/.tigrc ~/.tigrc
+	@ln -sf ~/code/dotfiles/.tigrc ~/.tigrc
 
 karabinersetup: ## set up karabiner config
 	@printf '${CYAN}%s${RESET}\n' 'set up karabiner config'
-	@ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
+	@ln -sf ~/code/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
