@@ -12,3 +12,6 @@ alias python="python3"
 
 # function
 source ~/.zsh_functions/ssh_colors.zsh
+
+# Override default macOS path with Homebrew's path when both exist (e.g., Python).
+export PATH="/opt/homebrew/bin:$PATH"
