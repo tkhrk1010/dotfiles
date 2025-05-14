@@ -19,3 +19,5 @@ dein/state_vim.vim
 secrets
 
 .DS_Store
+
+.vscode
